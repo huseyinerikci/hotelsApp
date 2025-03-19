@@ -9,21 +9,21 @@ const Header: FC = () => {
           <h1 className="text-xl font-bold md:text-2xl">Tripster</h1>
 
           <nav className="flex gap-5 items-center">
-            <Link to="/">Hotels</Link>
+            <Link to="/">Oteller</Link>
             <Link to="/" className="max-md:hidden">
-              Popular
+              Popüler
             </Link>
-            <Link to="/create">Create</Link>
+            <Link to="/create">Oluştur</Link>
           </nav>
         </div>
 
         <div className="flex gap-5 items-center">
           <button className="border border-blue-500 rounded-full py-1 px-5 max-md:hidden">
-            Signup
+            Kayıt Ol
           </button>
 
           <button className="bg-blue-500 text-white rounded-full py-1 px-5 ">
-            Login
+            Giriş Yap
           </button>
         </div>
       </div>

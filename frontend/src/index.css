@@ -12,4 +12,10 @@
       ),
       url("/bg.jpg");
   }
+  .field {
+    @apply flex flex-col gap-2;
+  }
+  .input {
+    @apply border border-zinc-200 rounded-md px-4 py-1 shadow-sm;
+  }
 }

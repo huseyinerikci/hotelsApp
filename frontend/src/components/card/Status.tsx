@@ -19,9 +19,7 @@ const Status: FC<Props> = ({ availability, expanded = false }) => {
         <CgUnavailable className="text-xl text-red-700" />
       )}
       {expanded && (
-        <p className="font-bold">
-          {availability ? "Available" : "Unavailable"}
-        </p>
+        <p className="font-bold">{availability ? "Mevcut" : "Mevcut Değil"}</p>
       )}
     </div>
   );

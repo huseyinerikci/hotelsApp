@@ -1,12 +1,37 @@
-import { useQuery } from "@tanstack/react-query";
-import { PlacesResponse } from "../types";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { PlaceData, PlaceResponse, PlacesResponse } from "../types";
 import api from "./api";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
-const getPlaces = () => {
+export const getPlaces = (paramsObj?: any) => {
   return useQuery({
-    queryKey: ["places"],
+    queryKey: ["places", paramsObj],
     queryFn: () =>
-      api.get<PlacesResponse>("/places").then((res) => res.data.places),
+      api
+        .get<PlacesResponse>("/places", { params: paramsObj })
+        .then((res) => res.data.places),
   });
 };
-export default getPlaces;
+export const createPlace = () => {
+  const navigate = useNavigate();
+  return useMutation({
+    mutationKey: ["create-place"],
+    mutationFn: (body: PlaceData) => api.post("/places", body),
+    onSuccess: (res) => {
+      toast.success("İlan başarıyla oluşturuldu");
+      navigate("/");
+    },
+    onError: (error) => {
+      toast.error("İlan oluşturulurken hata oluştu");
+    },
+  });
+};
+
+export const getPlaceById = (id: string) => {
+  return useQuery({
+    queryKey: ["place"],
+    queryFn: () =>
+      api.get<PlaceResponse>(`/place/${id}`).then((res) => res.data.place),
+  });
+};

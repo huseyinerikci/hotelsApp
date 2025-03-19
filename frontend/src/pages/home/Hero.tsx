@@ -5,10 +5,10 @@ const Hero: FC = () => {
     <div className="hero bg-center bg-cover h-[20vh] md:h-[30vh] grid place-items-center rounded-3xl p-5">
       <div className="text-center text-white">
         <h1 className="text-xl md:text-3xl lg:text-4xl font-bold mb-5">
-          Book accommodation with Tripster
+          Tripster ile konaklama rezervasyonu yap
         </h1>
         <p className="md:text-lg lg:text-xl">
-          1,340,076 rooms around the world are waiting for you!
+          Dünya genelinde 1,340,076 oda seni bekliyor!
         </p>
       </div>
     </div>

@@ -15,12 +15,12 @@ const Rating: FC<Props> = ({ rating, expanded = false }) => {
 
   const ratingText =
     rating >= 4.7
-      ? "Excellent"
+      ? "Mükemmel"
       : rating >= 4
-      ? "Good"
+      ? "İyi"
       : rating >= 3
-      ? "Average"
-      : "Bad";
+      ? "Orta"
+      : "Kötü";
   return (
     <div>
       <span className={`${color} text-white p-2 rounded-lg font-bold w-fit`}>

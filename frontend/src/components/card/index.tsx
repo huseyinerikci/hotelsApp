@@ -41,14 +41,16 @@ const Card: FC<Props> = ({ place }) => {
             ))}
           </div>
 
-          <Rating rating={place.rating} expanded={true} />
+          <Rating rating={place.rating} />
         </div>
 
         <div className="flex flex-col items-end">
           <span className="font-semibold text-2xl">
             ${place.price_per_night}
           </span>
-          <span className="text-xs text-gray-400">taxes and fees included</span>
+          <span className="text-xs text-gray-400">
+            vergiler ve ücretler dahil
+          </span>
         </div>
       </div>
     </Link>

@@ -1,6 +1,13 @@
-# Hotel App
+# Hotels App
 
 A modern and user-friendly hotel management system. This application is designed to make hotel reservations and management easier.
+
+## Preview
+
+A preview of my hotels app project is in the gif below.
+
+![hotelapp](https://github.com/user-attachments/assets/52fec1c2-e239-44f0-a3a3-affccc52f8ac)
+
 
 ## 🚀 Technologies
 

@@ -34,7 +34,7 @@ const Card: FC<Props> = ({ place }) => {
             {place.amenities.slice(0, 2).map((i, key) => (
               <span
                 key={key}
-                className="border border-zinc-200 rounded-md px-2 py-1 text-sm"
+                className="border border-zinc-200 rounded-md px-2 py-1"
               >
                 {i}
               </span>
@@ -45,9 +45,7 @@ const Card: FC<Props> = ({ place }) => {
         </div>
 
         <div className="flex flex-col items-end">
-          <span className="font-semibold text-2xl">
-            ${place.price_per_night}
-          </span>
+          <span className="font-bold text-2xl">${place.price_per_night}</span>
           <span className="text-xs text-gray-400">
             vergiler ve ücretler dahil
           </span>

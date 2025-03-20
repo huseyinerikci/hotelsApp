@@ -35,3 +35,18 @@ export const getPlaceById = (id: string) => {
       api.get<PlaceResponse>(`/place/${id}`).then((res) => res.data.place),
   });
 };
+
+export const deletePlace = () => {
+  const navigate = useNavigate();
+  return useMutation({
+    mutationKey: ["delete-place"],
+    mutationFn: (id: number) => api.delete(`/place/${id}`),
+    onSuccess: () => {
+      toast.success("İlan başarıyla silindi");
+      navigate("/");
+    },
+    onError: (error) => {
+      toast.error("İlan silinirken hata oluştu");
+    },
+  });
+};
